@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is 0˚F right now in NYC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGV-tX-D4W">
+                                <rect key="frame" x="20" y="287" width="560" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="Gdx-WI-or9"/>
+                                    <constraint firstAttribute="height" constant="25" id="ys1-GH-oik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <color key="textColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="YJ1-fb-Gv7">
+                                <rect key="frame" x="275" y="223" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="x1u-1e-J3k"/>
+                                    <constraint firstAttribute="height" constant="50" id="zFV-nc-V4D"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dGV-tX-D4W" firstAttribute="top" secondItem="YJ1-fb-Gv7" secondAttribute="bottom" constant="14" id="8sq-gm-EmF"/>
+                            <constraint firstItem="dGV-tX-D4W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LgO-K1-npX"/>
+                            <constraint firstItem="dGV-tX-D4W" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="emY-xj-1Pe"/>
+                            <constraint firstItem="YJ1-fb-Gv7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fVu-7Q-Ggr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="weatherImageView" destination="YJ1-fb-Gv7" id="E2y-62-Q5F"/>
+                        <outlet property="weatherLabel" destination="dGV-tX-D4W" id="Uwb-XY-rwO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="325" y="399"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloudy" width="33" height="33"/>
+    </resources>
 </document>

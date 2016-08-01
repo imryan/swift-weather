@@ -1,25 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="6185.10" systemVersion="14A360a" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="NO" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is 0˚F right now in NYC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSP-eS-AAg">
+                                <rect key="frame" x="741" y="566" width="439" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="439" id="oVv-JH-hOQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="textColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="o8z-Ts-XXh">
+                                <rect key="frame" x="910" y="470" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fCr-H2-XMZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o8z-Ts-XXh" firstAttribute="centerX" secondItem="CSP-eS-AAg" secondAttribute="centerX" id="Dhc-LE-5It"/>
+                            <constraint firstItem="CSP-eS-AAg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="566" id="GDP-AR-SMH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o8z-Ts-XXh" secondAttribute="bottom" constant="510" id="NRR-j4-gSl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CSP-eS-AAg" secondAttribute="bottom" constant="471" id="Src-mR-VLh"/>
+                            <constraint firstItem="o8z-Ts-XXh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="470" id="Vn8-Ll-ofw"/>
+                            <constraint firstItem="o8z-Ts-XXh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eIR-xJ-BQN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="weatherImageView" destination="o8z-Ts-XXh" id="u2T-WH-Jtg"/>
+                        <outlet property="weatherLabel" destination="CSP-eS-AAg" id="BDf-kE-3bT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="460" y="399"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloudy" width="33" height="33"/>
+    </resources>
 </document>

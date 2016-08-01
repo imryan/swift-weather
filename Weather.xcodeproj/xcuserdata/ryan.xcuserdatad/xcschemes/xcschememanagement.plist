@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Weather-TV.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Weather-Watch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Weather.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +23,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>9478E9211D4F928000552D04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9478E93A1D4F952700552D04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>94EEA4891D4FA1E4006B7C55</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var weatherImageView: UIImageView!
+    @IBOutlet weak var weatherLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let location = CLLocation(latitude: 40.705280, longitude: -74.014025)
+        
+        ForecastKit.getWeatherForLocation(location) { (weather) in
+            dispatch_async(dispatch_get_main_queue(), {
+                self.weatherImageView.image = weather.icon
+                self.weatherLabel.text = "It is \(weather.temperature)˚F right now in NYC"
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-
