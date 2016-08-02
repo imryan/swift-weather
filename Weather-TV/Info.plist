@@ -28,5 +28,7 @@
 	<array>
 		<string>arm64</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to fetch the weather.</string>
 </dict>
 </plist>

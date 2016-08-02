@@ -9,9 +9,11 @@
 import Alamofire
 import CoreLocation
 
-class ForecastKit {
+class ForecastKit: NSObject, CLLocationManagerDelegate {
     
-    class func getWeatherForLocation(location: CLLocation, completion: (Weather) -> ()) {
+    static let sharedInstance = ForecastKit()
+    
+    func getWeatherForLocation(location: CLLocation, completion: (Weather) -> ()) {
         let url = "https://api.forecast.io/forecast/\(FORECAST_API_KEY)/\(location.coordinate.latitude),\(location.coordinate.longitude)"
         
         Alamofire.request(.GET, url).responseJSON { (response) in

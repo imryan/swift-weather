@@ -7,7 +7,6 @@ target 'Weather' do
 
   # Pods for Weather
   pod 'Alamofire'
-
 end
 
 target 'Weather-TV' do
@@ -16,14 +15,12 @@ target 'Weather-TV' do
 
   # Pods for Weather-TV
   pod 'Alamofire'
-
 end
 
-target 'Weather-Watch Extension' do
+target 'Weather-Mac' do
     # Comment this line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
     
-    # Pods for Weather-Watch Extension
+    # Pods for Weather-TV
     pod 'Alamofire'
-    
 end

@@ -1,6 +1,0 @@
-framework module Pods_Weather_Watch_Extension {
-  umbrella header "Pods-Weather-Watch Extension-umbrella.h"
-
-  export *
-  module * { export * }
-}

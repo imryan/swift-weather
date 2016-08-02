@@ -8,21 +8,8 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Weather_Watch" customModuleProvider="target">
-                    <items>
-                        <imageView alignment="center" verticalAlignment="center" image="cloudy" contentMode="scaleAspectFit" id="Ky0-Tw-H8h"/>
-                        <label width="136" height="43.5" alignment="center" verticalAlignment="center" text="It is 0˚F right now in NYC" textAlignment="center" numberOfLines="2" id="opW-sQ-l87">
-                            <color key="textColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
-                        </label>
-                    </items>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="weatherImageView" destination="Ky0-Tw-H8h" id="rfX-jT-ChU"/>
-                        <outlet property="weatherLabel" destination="opW-sQ-l87" id="qup-CX-bVz"/>
-                    </connections>
-                </controller>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Weather_Watch" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="440" y="363"/>
         </scene>
     </scenes>
 </document>

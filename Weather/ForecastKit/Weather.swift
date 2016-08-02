@@ -7,30 +7,14 @@
 //
 
 import Foundation
-import UIKit
 
 class Weather {
     
     var temperature: Double
-    var icon: UIImage = UIImage.init()
+    var iconString: String
     
     init(dictionary: NSDictionary) {
         self.temperature = dictionary["apparentTemperature"] as! Double
-        self.icon = iconToImage(dictionary["icon"] as! String)
-    }
-}
-
-extension Weather {
-    
-    // icon names:
-    // clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy,
-    // partly-cloudy-day, partly-cloudy-night, hail, thunderstorm, tornado
-    
-    func iconToImage(icon: String) -> UIImage {
-        if let image = UIImage(named: icon) {
-            return image
-        } else {
-            return UIImage()
-        }
+        self.iconString = dictionary["icon"] as! String
     }
 }
