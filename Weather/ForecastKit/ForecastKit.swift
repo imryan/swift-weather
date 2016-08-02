@@ -12,6 +12,7 @@ import CoreLocation
 class ForecastKit: NSObject, CLLocationManagerDelegate {
     
     static let sharedInstance = ForecastKit()
+    static let location = CLLocation(latitude: 40.75921100, longitude: -73.98463800)
     
     func getWeatherForLocation(location: CLLocation, completion: (Weather) -> ()) {
         let url = "https://api.forecast.io/forecast/\(FORECAST_API_KEY)/\(location.coordinate.latitude),\(location.coordinate.longitude)"

@@ -19,12 +19,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Alamofire-watchOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Weather-Mac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-Weather-TV.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Weather-Watch Extension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,6 +47,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>063E3C59C1B7382B70A98D5EF8052B8D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53715C39C9355639332543E91B60C12C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>55D30BAE152D2D0429A9AB76A21E0646</key>
 		<dict>
 			<key>primary</key>

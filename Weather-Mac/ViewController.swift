@@ -19,6 +19,8 @@ class ViewController: NSViewController, CLLocationManagerDelegate {
     
     // MARK: - Location Delegate
     
+    // MARK: - EXAMPLE CODE FLATIRON STUDENTS PRESENTS
+    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [AnyObject]) {
         let location = locations[0] as! CLLocation
         locationManager.stopUpdatingLocation()
@@ -31,9 +33,22 @@ class ViewController: NSViewController, CLLocationManagerDelegate {
         }
     }
     
+    
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Location error: \(error)")
     }
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
     
     // MARK: - View
     

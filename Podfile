@@ -2,7 +2,6 @@
 # platform :ios, '9.0'
 
 target 'Weather' do
-  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for Weather
@@ -10,7 +9,6 @@ target 'Weather' do
 end
 
 target 'Weather-TV' do
-  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for Weather-TV
@@ -18,9 +16,15 @@ target 'Weather-TV' do
 end
 
 target 'Weather-Mac' do
-    # Comment this line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
     
     # Pods for Weather-TV
+    pod 'Alamofire'
+end
+
+target 'Weather-Watch Extension' do
+    use_frameworks!
+    
+    # Pods for Weather-Watch
     pod 'Alamofire'
 end
