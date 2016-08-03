@@ -6,4 +6,4 @@
 //  Copyright © 2016 Ryan Cohen. All rights reserved.
 //
 
-let FORECAST_API_KEY = "8519b654337c222badfac965d878bf04"
+let FORECAST_API_KEY = ""
